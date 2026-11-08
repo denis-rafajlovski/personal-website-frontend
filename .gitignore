@@ -1,7 +1,23 @@
-.DS_Store
-.env
-/node_modules/
+# Dependencies
+node_modules/
 
-# React Router
-/.react-router/
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Build files
 /build/
+/dist/
+/.react-router/
+
+# IDE
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*

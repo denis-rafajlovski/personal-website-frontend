@@ -1,87 +1,122 @@
-# Welcome to React Router!
+# Personal Website – Frontend
 
-A modern, production-ready template for building full-stack React applications using React Router.
+A modern, responsive personal portfolio website built with React and TypeScript. The website showcases my development projects, technical skills, and professional work through a dynamic interface connected to a Strapi CMS backend.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## Tech Stack
+
+- **React 19** – UI development
+- **TypeScript** – Static typing
+- **React Router 8** – Routing and server-side rendering
+- **Tailwind CSS 4** – Styling and responsive layouts
+- **Vite 8** – Development and build tooling
+- **Framer Motion** – Animations and transitions
+- **React Icons** – Icon library
+- **React Markdown** – Markdown content rendering
 
 ## Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- Responsive portfolio interface
+- Dynamic project management through Strapi CMS
+- Featured projects section
+- Project categories and filtering
+- Project details and descriptions
+- Dynamic images and media
+- Animated UI components
+- Server-side rendering with React Router
+
+## Project Structure
+
+```text
+personal-website-frontend/
+├── app/
+│   ├── components/
+│   ├── routes/
+│   └── ...
+├── public/
+├── data/
+├── package.json
+├── package-lock.json
+├── react-router.config.ts
+├── vite.config.ts
+├── tsconfig.json
+├── Dockerfile
+└── .env.example
+```
 
 ## Getting Started
 
-### Installation
+### Prerequisites
 
-Install the dependencies:
+- Node.js
+- npm
+- A running instance of the backend
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/denis-rafajlovski/personal-website-frontend.git
+```
+
+### 2. Navigate to the project
+
+```bash
+cd personal-website-frontend
+```
+
+### 3. Install dependencies
 
 ```bash
 npm install
 ```
 
-### Development
+### 4. Configure environment variables
 
-Start the development server with HMR:
+Create a `.env` file in the project root:
+
+```env
+VITE_API_URL=http://localhost:1337/api
+VITE_STRAPI_URL=http://localhost:1337
+```
+
+Update these values when using a deployed backend.
+
+### 5. Run the development server
 
 ```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
+### 6. Build for production
 
 ```bash
 npm run build
 ```
 
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
+### 7. Run the production server
 
 ```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
+npm run start
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
+## Available Scripts
 
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
+| Command               | Description                          |
+| --------------------- | ------------------------------------ |
+| `npm run dev`         | Start development server             |
+| `npm run build`       | Build production application         |
+| `npm run start`       | Start production server              |
+| `npm run typecheck`   | Run TypeScript checks                |
+| `npm run json-server` | Start local JSON Server on port 9090 |
 
-### DIY Deployment
+## Backend
 
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
+The application communicates with a separate Strapi CMS backend.
 
-Make sure to deploy the output of `npm run build`
+**Backend repository:**  
+https://github.com/denis-rafajlovski/personal-website-backend
 
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
+## Author
 
-## Styling
+** DENIS RAFAJLOVSKI **
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+- GitHub: https://github.com/denis-rafajlovski
