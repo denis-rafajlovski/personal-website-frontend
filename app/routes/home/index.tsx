@@ -13,7 +13,7 @@ import LatestPosts from '~/components/LatestPosts';
 export function meta({}: Route.MetaArgs) {
   return [
     { title: 'Personal Website | Welcome' },
-    { name: 'description', content: 'Costom Website' },
+    { name: 'description', content: 'Custom Website' },
   ];
 }
 

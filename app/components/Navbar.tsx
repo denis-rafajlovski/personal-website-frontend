@@ -15,7 +15,7 @@ const Navbar = () => {
           to="/"
           className="flex item-center gap-2 text-lg font-bold text-blue-300"
         >
-          <FaLaptopCode className="text-blue-400 text-xl" /> Denis The Frendly
+          <FaLaptopCode className="text-blue-400 text-xl" /> Denis The Friendly
           Developer
         </NavLink>
 

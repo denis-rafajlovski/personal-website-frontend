@@ -4,7 +4,7 @@ import type { Route } from '../home/+types';
 export function meta({}: Route.MetaArgs) {
   return [
     { title: 'Personal Website' },
-    { name: 'description', content: 'Costom Website' },
+    { name: 'description', content: 'Custom Website' },
   ];
 }
 
