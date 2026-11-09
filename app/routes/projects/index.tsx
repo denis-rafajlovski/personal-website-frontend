@@ -8,7 +8,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 export function meta({}: Route.MetaArgs) {
   return [
     { title: 'Personal Website | Projects' },
-    { name: 'description', content: 'Costom Website' },
+    { name: 'description', content: 'Custom Website' },
   ];
 }
 
@@ -66,7 +66,7 @@ const ProjectsPage = ({ loaderData }: Route.ComponentProps) => {
 
   return (
     <>
-      <h2 className="text-3xl text-white font-bold mb-8">Projects</h2>
+      <h2 className="text-3xl text-gray-900 dark:text-white font-bold mb-8">Projects</h2>
       <div className="flex flex-wrap gap-2 mb-8">
         {categories.map((category) => (
           <button
@@ -75,7 +75,7 @@ const ProjectsPage = ({ loaderData }: Route.ComponentProps) => {
               setSelectedCategory(category);
               setCurrentPage(1);
             }}
-            className={`px-3 py-1 rounded text-sm cursor-pointer ${selectedCategory === category ? 'bg-blue-600 text-white' : 'bg-gray-700 text-gray-200'}`}
+            className={`px-3 py-1 rounded text-sm cursor-pointer ${selectedCategory === category ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200'}`}
           >
             {category}
           </button>

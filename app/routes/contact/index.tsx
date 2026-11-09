@@ -34,8 +34,8 @@ import type { Route } from './+types';
 
 const ContactPage = ({ actionData }: Route.ComponentProps) => {
   return (
-    <div className="max-w-3xl mx-auto mt-12 px-6 py-8 bg-gray-900">
-      <h2 className="text-3xl font-bold text-white bm-8 text-center">
+    <div className="max-w-3xl mx-auto mt-12 px-6 py-8 bg-gray-100 dark:bg-gray-900 rounded-lg">
+      <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
         📬 Contact me
       </h2>
 
@@ -47,7 +47,7 @@ const ContactPage = ({ actionData }: Route.ComponentProps) => {
         <div>
           <label
             htmlFor="name"
-            className="block text-sm font-medium text-gray-300"
+            className="block text-sm font-medium text-gray-700 dark:text-gray-300"
           >
             Full Name
           </label>
@@ -55,13 +55,13 @@ const ContactPage = ({ actionData }: Route.ComponentProps) => {
             type="text"
             id="name"
             name="name"
-            className="w-full mt-1 px-4 py-2 border border-gray-700 rounded-lg bg-gray-800 text-gray-100"
+            className="w-full mt-1 px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
           />
         </div>
         <div>
           <label
             htmlFor="email"
-            className="block text-sm font-medium text-gray-300"
+            className="block text-sm font-medium text-gray-700 dark:text-gray-300"
           >
             Email
           </label>
@@ -69,13 +69,13 @@ const ContactPage = ({ actionData }: Route.ComponentProps) => {
             type="email"
             id="email"
             name="email"
-            className="w-full mt-1 px-4 py-2 border border-gray-700 rounded-lg bg-gray-800 text-gray-100"
+            className="w-full mt-1 px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
           />
         </div>
         <div>
           <label
             htmlFor="subject"
-            className="block text-sm font-medium text-gray-300"
+            className="block text-sm font-medium text-gray-700 dark:text-gray-300"
           >
             Subject
           </label>
@@ -83,20 +83,20 @@ const ContactPage = ({ actionData }: Route.ComponentProps) => {
             type="text"
             id="subject"
             name="subject"
-            className="w-full mt-1 px-4 py-2 border border-gray-700 rounded-lg bg-gray-800 text-gray-100"
+            className="w-full mt-1 px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
           />
         </div>
         <div>
           <label
             htmlFor="message"
-            className="block text-sm font-medium text-gray-300"
+            className="block text-sm font-medium text-gray-700 dark:text-gray-300"
           >
             Message
           </label>
           <textarea
             id="message"
             name="message"
-            className="w-full mt-1 px-4 py-2 border border-gray-700 rounded-lg bg-gray-800 text-gray-100"
+            className="w-full mt-1 px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
           />
         </div>
         <button className="w-full text-white py-2 rounded-lg bg-blue-600 hover:bg-blue-700 cursor-pointer">

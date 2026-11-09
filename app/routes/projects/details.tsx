@@ -36,7 +36,7 @@ const ProjectDetailsPage = ({ loaderData }: Route.ComponentProps) => {
     <>
       <Link
         to="/projects"
-        className="flex items-center text-blue-400 hover:text-blue-500 mb-6 transition"
+        className="flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-500 mb-6 transition"
       >
         <FaArrowLeft className="mr-2" /> Back to Projects
       </Link>
@@ -51,13 +51,13 @@ const ProjectDetailsPage = ({ loaderData }: Route.ComponentProps) => {
         </div>
 
         <div>
-          <h1 className="text-3xl font-bold text-blue-400 mb-4">
+          <h1 className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-4">
             {project.title}
           </h1>
-          <p className="text-gray-300 text-sm mb-4">
+          <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
             {new Date(project.date).toLocaleDateString()} ● {project.category}
           </p>
-          <p className="text-gray-200 mb-6">{project.description}</p>
+          <p className="text-gray-700 dark:text-gray-200 mb-6">{project.description}</p>
           <a
             href={project.url}
             target="_blank"

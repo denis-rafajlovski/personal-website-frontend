@@ -1,4 +1,3 @@
-import { section } from 'framer-motion/client';
 import type { Project } from '~/types';
 import ProjectCard from './ProjectCard';
 
@@ -10,18 +9,9 @@ type FeaturedProjectsProps = {
 const FeaturedProjects = ({ projects, count = 4 }: FeaturedProjectsProps) => {
   if (projects.length === 0) return null;
 
-  // console.log('Received projects:', projects);
-  // console.log('Is array:', Array.isArray(projects));
-
-  // const featured = Array.isArray(projects)
-  //   ? projects.filter((p) => p.featured).slice(0, count)
-  //   : [];
-
-  // const featured = projects.filter((p) => p.featured).slice(0, count);
-
   return (
     <section>
-      <h2 className="text-2xl font-bold mb-6 text-gray-200 text-center">
+      <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-gray-200 text-center">
         Featured Projects
       </h2>
       <div className="grid gap-6 sm:grid-cols-2">

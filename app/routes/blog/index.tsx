@@ -4,12 +4,9 @@ import type { Post, StrapiResponse, StrapiProject, StrapiPost } from '~/types';
 import PostCard from '~/components/PostCard';
 import Pagination from '~/components/Pagination';
 import PostFilter from '~/components/PostFilter';
-import { filter } from 'framer-motion/client';
-
 export async function loader({
   request,
 }: Route.LoaderArgs): Promise<{ posts: Post[] }> {
-  const url = new URL(`/posts-meta.json`, request.url);
   const res = await fetch(
     `${import.meta.env.VITE_API_URL}/posts?populate=image&sort=date:desc`,
   );
@@ -54,8 +51,10 @@ const BlogPage = ({ loaderData }: Route.ComponentProps) => {
   const currentPosts = filteredPosts.slice(indexOfFirst, indexOfLast);
 
   return (
-    <div className="max-w-3xl mx-auto mt-10 px-6 py-6 bg-gray-900">
-      <h2 className="text-3xl text-white font-bold mb-8">Blog Page</h2>
+    <div className="max-w-3xl mx-auto mt-10 px-6 py-6 bg-gray-100 dark:bg-gray-900 rounded-lg">
+      <h2 className="text-3xl text-gray-900 dark:text-white font-bold mb-8">
+        Blog Page
+      </h2>
 
       <PostFilter
         searchQuery={searchQuery}
@@ -67,17 +66,11 @@ const BlogPage = ({ loaderData }: Route.ComponentProps) => {
 
       <div className="space-y-8">
         {currentPosts.length === 0 ? (
-          <p className="text-gray-400 text-center">No post found</p>
+          <p className="text-gray-500 dark:text-gray-400 text-center">No post found</p>
         ) : (
-          currentPosts.map(
-            (post: {
-              slug: any;
-              id?: string;
-              title?: string;
-              excerpt?: string;
-              date?: string;
-            }) => <PostCard key={post.slug} post={post} />,
-          )
+          currentPosts.map((post) => (
+            <PostCard key={post.slug} post={post} />
+          ))
         )}
       </div>
 
