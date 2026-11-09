@@ -9,6 +9,7 @@ import type {
 } from '~/types';
 import type { Post } from '~/types';
 import LatestPosts from '~/components/LatestPosts';
+import { count } from 'console';
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -69,7 +70,7 @@ const HomePage = ({ loaderData }: Route.ComponentProps) => {
     <>
       <FeaturedProjects projects={projects} count={2} />
       <AboutPreview />
-      <LatestPosts posts={posts} />
+      <LatestPosts posts={posts} limit={1} />
     </>
   );
 };
